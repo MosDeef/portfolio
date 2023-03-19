@@ -1,12 +1,12 @@
-- name: Longest Word Game
-  description: Decent description of the app
-  image: projects/placeholder.png
-  url: https://www.google.com
+- name: NaniMiru
+  description: A Tinder-like that allows a group to quickly and easily come to a consensus on a movie to watch
+  image: https://www.nanimiru.baby/meta.png
+  url: https://nanimiru.baby
 
-- name: Movie Watchlist
-  description: Decent description of the app
+- name: Kigurumi Kingdom
+  description: An online marketplace connecting fans with the costumed mascots of Japan
   image: projects/placeholder.png
-  url: https://www.google.com
+  url: https://kigurumikingdom.herokuapp.com/
 
 - name: Airbnb
   description: Decent description of the app
