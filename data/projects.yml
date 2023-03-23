@@ -1,11 +1,11 @@
 - name: NaniMiru
   description: A Tinder-like that allows a group to quickly and easily come to a consensus on a movie to watch
-  image: https://www.nanimiru.baby/meta.png
-  url: https://nanimiru.baby
+  image: projects/nani.png
+  url: https://www.nanimiru.baby
 
 - name: Kigurumi Kingdom
   description: An online marketplace connecting fans with the costumed mascots of Japan
-  image: projects/placeholder.png
+  image: projects/kigu.png
   url: https://kigurumikingdom.herokuapp.com/
 
 - name: Airbnb
