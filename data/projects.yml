@@ -8,12 +8,12 @@
   image: projects/kigu.png
   url: https://kigurumikingdom.herokuapp.com/
 
-- name: Airbnb
-  description: Decent description of the app
-  image: projects/placeholder.png
-  url: https://www.google.com
+- name: DeefKit
+  description: A drum machine built in JavaScript, HTML and CSS
+  image: projects/deefkit.png
+  url: https://deefkit.netlify.app/
 
-- name: Final project
-  description: Decent description of the app
-  image: projects/placeholder.png
-  url: https://www.google.com
+- name: Deefculator
+  description: A calculator built in JavaScript, HTML and CSS
+  image: projects/calc.png
+  url: https://deefculator.netlify.app/
