@@ -30,9 +30,7 @@
   text-decoration: if($link-decoration == none, null, none);
   @include transition($nav-link-transition);
 
-  &:hover {
-    text-decoration: underline;
-  }
+  &:hover,
   &:focus {
     color: var(--#{$prefix}nav-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
