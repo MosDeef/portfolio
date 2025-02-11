@@ -10,3 +10,23 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+.navbar-lewagon {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.hidden-navbar {
+  top: -80px;
+}
+
+.hover-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 999;
+}
