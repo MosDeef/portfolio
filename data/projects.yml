@@ -13,7 +13,7 @@
 - name: NaniMiru
   description: A Tinder-like that allows a group to quickly and easily come to a consensus on a movie to watch
   image: projects/nani.png
-  github: https://github.com/MosDeef/NaniMiru
+  github: https://github.com/gillaryb/NaniMiru
 
 - name: Kigurumi Kingdom
   description: An online marketplace connecting fans with the costumed mascots of Japan
