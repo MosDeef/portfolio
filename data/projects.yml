@@ -1,19 +1,21 @@
-- name: NaniMiru
-  description: A Tinder-like that allows a group to quickly and easily come to a consensus on a movie to watch
-  image: projects/nani.png
-  url: https://www.nanimiru.baby
-
-- name: Kigurumi Kingdom
-  description: An online marketplace connecting fans with the costumed mascots of Japan
-  image: projects/kigu.png
-  url: https://kigurumikingdom.herokuapp.com/
-
 - name: DeefKit
   description: A drum machine built in JavaScript, HTML and CSS
   image: projects/deefkit.png
   url: https://deefkit.netlify.app/
+  github: https://github.com/MosDeef/JSdrumKit
 
 - name: Deefculator
   description: A calculator built in JavaScript, HTML and CSS
   image: projects/calc.png
   url: https://deefculator.netlify.app/
+  github: https://github.com/MosDeef/js-calculator
+
+- name: NaniMiru
+  description: A Tinder-like that allows a group to quickly and easily come to a consensus on a movie to watch
+  image: projects/nani.png
+  github: https://github.com/MosDeef/NaniMiru
+
+- name: Kigurumi Kingdom
+  description: An online marketplace connecting fans with the costumed mascots of Japan
+  image: projects/kigu.png
+  github: https://github.com/MosDeef/kigurumikingdom
