@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgba(121, 113, 113, 0.8);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,10 +16,6 @@
   width: 100%;
   transition: top 0.3s ease-in-out;
   z-index: 1000;
-}
-
-.hidden-navbar {
-  top: -80px;
 }
 
 .hover-zone {
