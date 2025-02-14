@@ -10,3 +10,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color:#c2dce2;
+  text-decoration:none;
+  cursor:pointer;
+}
