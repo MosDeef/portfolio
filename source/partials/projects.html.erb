@@ -11,12 +11,12 @@
                 <h2><%= project.name %></h2>
                 <p><%= project.description %></p>
                 <div class="overlay-links">
-                  <% if project.url.present? %>
-                    <%= link_to "Live Demo", project.url, class: "project-link", target: "_blank" %>
-                  <% end %>
-                  <% if project.github.present? %>
-                    <%= link_to "GitHub", project.github, class: "project-link", target: "_blank" %>
-                  <% end %>
+                    <% if project.url %>
+                      <%= link_to "Live <i class='fa-solid fa-globe'></i>", project.url, class: 'btn btn-outline-dark', target: '_blank' %>
+                    <% end %>
+                    <% if project.github %>
+                      <%= link_to "Code <i class='fa-brands fa-github'></i>", project.github, class: 'btn btn-outline-dark', target: '_blank' %>
+                    <% end %>
                 </div>
               </div>
             </div>
