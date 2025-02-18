@@ -1,22 +1,51 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
-.card-product {
+.card {
   position: relative;
   width: 100%;
   height: 250px;
-  overflow: hidden;
-
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-  border: solid 5px transparent;
-  border-image: linear-gradient(to bottom right, #1f59b1, #cf5db3) 1;
+  overflow: visible;
+  z-index: 1;
 }
 
-.card-product:hover {
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  background-image: conic-gradient(from var(--angle), transparent 25%, blue);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  animation: 3s spin linear infinite;
+}
+
+.card::before{
+  filter:blur(1.5rem);
+  opacity: 0.4;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+.card:hover {
   transform: scale(1.02);
 }
 
@@ -45,7 +74,7 @@
   padding: 20px;
 }
 
-.card-product:hover .card-overlay {
+.card:hover .card-overlay {
   opacity: 1;
 }
 .overlay-links {

@@ -5,7 +5,7 @@
         <h2> Projects</h2>
         <div class="cards">
           <% data.projects.each do |project| %>
-           <div class="card-product">
+           <div class="card">
             <%= image_tag project.image, alt: "project image", class: "card-image" %>
               <div class="card-overlay">
                 <h2><%= project.name %></h2>
