@@ -16,24 +16,51 @@ let currentPhrase = []
 let i = 0
 let j = 0
 let isDeleting = false
-
-console.log(textDisplay)
+let isEnd = false
 
 const phrases = [
-  'Hi, my name is Jim',
-  'こんにちはジムともうします',
-  'Thanks for visiting',
-  'よろしくお願いします',
+  'Hi, this is Jim’s portfolio',
+  'こんにちはこれはジムのポートフォリオです',
+  'Thanks for visiting！',
+  'よろしくお願いします！',
 ]
 
 function loop(){
+  isEnd = false
   textDisplay.innerHTML = phrases[0]
-  if (i < phrases.length){
-    if (!isDeleting && j <= phrases[i].length)
+
+  if (i < phrases.length) {
+
+    if (!isDeleting && j <= phrases[i].length) {
       currentPhrase.push(phrases[i][j])
-    console.log(currentPhrase)
+    j++
+    textDisplay.innerHTML = currentPhrase.join('')
   }
-  const time = 2000
+
+  if (isDeleting && j <= phrases[i].length) {
+    currentPhrase.pop()
+    j--
+    textDisplay.innerHTML = currentPhrase.join('')
+  }
+
+  if (j == phrases[i].length) {
+    isEnd = true
+    isDeleting = true
+  }
+
+  if (isDeleting && j === 0) {
+    currentPhrase = []
+    isDeleting = false
+    i ++
+    if ( i === phrases.length) {
+      i = 0
+    }
+  }
+}
+
+  const spedUp = Math.random() * 100
+  const normalSpeed = Math.random() * 300
+  const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed
   setTimeout(loop, time)
 }
 
