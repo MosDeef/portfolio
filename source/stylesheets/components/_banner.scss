@@ -1,3 +1,13 @@
 .banner {
   height: 100vh;
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+#text {
+  border-right: solid black 4px;
+  height: 35px;
 }
