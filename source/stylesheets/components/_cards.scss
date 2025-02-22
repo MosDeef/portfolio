@@ -12,35 +12,43 @@
   transition: transform 0.3s ease-in-out;
   overflow: visible;
   z-index: 1;
+  border: 3px solid blue;
 }
 
-@property --angle{
+@property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
-.card::after, .card::before{
+
+.card::after, .card::before {
   content: '';
   position: absolute;
-  width: calc(100% + 6px);
-  height: calc(100% + 6px);
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
   background-image: conic-gradient(from var(--angle), transparent 25%, blue);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
-  animation: 3s spin linear infinite;
+  opacity: 0;
 }
 
-.card::before{
-  filter:blur(1.5rem);
+.card::before {
+  filter: blur(1.5rem);
   opacity: 0.4;
 }
-@keyframes spin{
-  from{
+
+.card:hover::after, .card:hover::before {
+  opacity: 1; /* Show the animation on hover */
+  animation: 6s spin linear infinite; /* Increase the duration for smoother spin */
+}
+
+@keyframes spin {
+  from {
     --angle: 0deg;
   }
-  to{
+  to {
     --angle: 360deg;
   }
 }
@@ -54,7 +62,6 @@
   height: 100%;
   object-fit: cover;
 }
-
 
 .card-overlay {
   position: absolute;
@@ -77,6 +84,7 @@
 .card:hover .card-overlay {
   opacity: 1;
 }
+
 .overlay-links {
   position: absolute;
   bottom: 20px;
