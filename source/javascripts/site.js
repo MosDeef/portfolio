@@ -5,11 +5,39 @@ const yours = document.querySelector('.yours');
 const roughNotation = document.querySelector('.rough-notation');
 const link = document.querySelector('.nav-link');
 const list = document.querySelector('.list');
-const a1 = annotate(title, { type: 'highlight' , color:'orange'});
+/* const a1 = annotate(title, { type: 'highlight' , color:'orange'});
 const a2 = annotate(shake, {type:'highlight', color:'yellow', padding:7});
 const a3 = annotate(yours, {type:'underline', color:'teal', padding:7});
 const ag = annotationGroup([a1, a2, a3]);
 ag.show();
+ */
+const textDisplay = document.getElementById('text')
+let currentPhrase = []
+let i = 0
+let j = 0
+let isDeleting = false
+
+console.log(textDisplay)
+
+const phrases = [
+  'Hi, my name is Jim',
+  'こんにちはジムともうします',
+  'Thanks for visiting',
+  'よろしくお願いします',
+]
+
+function loop(){
+  textDisplay.innerHTML = phrases[0]
+  if (i < phrases.length){
+    if (!isDeleting && j <= phrases[i].length)
+      currentPhrase.push(phrases[i][j])
+    console.log(currentPhrase)
+  }
+  const time = 2000
+  setTimeout(loop, time)
+}
+
+loop ()
 
 document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0;
